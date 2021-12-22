@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Scrapped Data</h1>
+    <% if(source && heading) { %>
+    <textarea name="" id="show" cols="30" rows="10" hidden>
+    <%= heading[0] %><%= source[0] %>
+    <%= heading[1] %><%= source[1] %>
+    <%= heading[2] %><%= source[2] %>
+    </textarea>
+    <%} %>
+
+    <div id="display"></div>
+  </body>
+  <script>
+    check = document.getElementById("show").value;
+    if (check) {
+      document.getElementById("display").innerHTML = check;
+    }
+  </script>
+</html>
